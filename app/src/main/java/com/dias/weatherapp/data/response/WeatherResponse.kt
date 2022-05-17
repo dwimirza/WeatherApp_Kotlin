@@ -1,4 +1,4 @@
-package com.diasandharits.weatherapp.data
+package com.dias.weatherapp.data.response
 
 import com.google.gson.annotations.SerializedName
 
@@ -15,5 +15,8 @@ data class WeatherResponse(
 
     @field:SerializedName("weather")
     val weather: List<WeatherItem>? = null,
+
+    @field:SerializedName("main")
+    val main: Main? = null,
 
     )

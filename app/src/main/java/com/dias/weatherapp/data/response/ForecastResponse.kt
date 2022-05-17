@@ -1,4 +1,4 @@
-package com.diasandharits.weatherapp.data
+package com.dias.weatherapp.data.response
 
 import com.google.gson.annotations.SerializedName
 
@@ -62,13 +62,13 @@ data class Wind(
 
 data class ListItem(
 
-    @field:SerializedName("dt_txt")
+	@field:SerializedName("dt_txt")
     val dtTxt: String? = null,
 
-    @field:SerializedName("weather")
+	@field:SerializedName("weather")
     val weather: List<WeatherItem?>? = null,
 
-    @field:SerializedName("main")
+	@field:SerializedName("main")
     val main: Main? = null,
 )
 
@@ -76,6 +76,9 @@ data class Main(
 
 	@field:SerializedName("temp_min")
 	val tempMin: Double? = null,
+
+	@field:SerializedName("temp")
+	val temp: Double? = null,
 
 	@field:SerializedName("temp_max")
 	val tempMax: Double? = null,

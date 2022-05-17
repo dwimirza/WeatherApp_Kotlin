@@ -1,4 +1,4 @@
-package com.diasandharits.weatherapp
+package com.dias.weatherapp
 
 import org.junit.Test
 
