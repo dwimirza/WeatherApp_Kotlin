@@ -1,6 +1,8 @@
 package com.dias.weatherapp
 
 import android.os.Bundle
+import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         _viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         searchCity()
-        viewModel.getWeatherByCity().observe(this){
+        viewModel.getWeatherByCity().observe(this) {
             binding.tvCity.text = it.name
             binding.tvDegree.text = it.main?.temp.toString()
         }
@@ -39,6 +41,14 @@ class MainActivity : AppCompatActivity() {
         binding.edtSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 viewModel.searchByCity(query.toString())
+                // hide keyboard
+                try {
+                    val inputMethodManager =
+                        getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                    inputMethodManager.hideSoftInputFromWindow(binding.root.windowToken, 0)
+                } catch (e: Exception) {
+                    Log.e("MainActivity", "Error hiding keyboard: ${e.message}")
+                }
                 return true
             }
 

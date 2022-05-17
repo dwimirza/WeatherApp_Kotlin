@@ -12,12 +12,14 @@ interface ApiService {
     fun getWeatherByCity(
         @Query("q") city: String,
         @Query("appid") appId: String? = API_KEY,
+        @Query("units") units: String? = "metric"
     ): Call<WeatherResponse>
 
     @GET("forecast")
     fun getForecastByCity(
         @Query("q") city: String,
         @Query("appid") appId: String? = API_KEY,
+        @Query("units") units: String? = "metric"
     ): Call<ForecastResponse>
 
     // call this function when app first time open
@@ -26,6 +28,7 @@ interface ApiService {
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
         @Query("appid") appId: String? = API_KEY,
+        @Query("units") units: String? = "metric"
     ): Call<WeatherResponse>
 
     @GET("forecast")
@@ -33,5 +36,6 @@ interface ApiService {
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
         @Query("appid") appId: String? = API_KEY,
+        @Query("units") units: String? = "metric"
     ): Call<ForecastResponse>
 }
