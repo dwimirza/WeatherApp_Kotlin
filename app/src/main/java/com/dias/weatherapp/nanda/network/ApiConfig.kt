@@ -1,4 +1,4 @@
-package com.nanda.weatherapp.dias.network
+package com.nanda.weatherapp.nanda.network
 
 import com.nanda.weatherapp.BuildConfig
 import okhttp3.Interceptor

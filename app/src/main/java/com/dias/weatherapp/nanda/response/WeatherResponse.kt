@@ -1,4 +1,4 @@
-package com.nanda.weatherapp.dias.response
+package com.nanda.weatherapp.nanda.response
 
 import com.google.gson.annotations.SerializedName
 

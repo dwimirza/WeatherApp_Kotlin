@@ -1,4 +1,4 @@
-package com.nanda.weatherapp.dias.response
+package com.nanda.weatherapp.nanda.response
 
 import com.google.gson.annotations.SerializedName
 
@@ -18,7 +18,7 @@ data class ForecastResponse(
 	val message: Int? = null,
 
 	@field:SerializedName("list")
-	val list: List<ListItem?>? = null,
+	val list: List<ListItem>? = null,
 )
 
 data class WeatherItem(

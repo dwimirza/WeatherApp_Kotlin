@@ -1,8 +1,8 @@
-package com.nanda.weatherapp.dias.network
+package com.nanda.weatherapp.nanda.network
 
 import com.nanda.weatherapp.BuildConfig.API_KEY
-import com.nanda.weatherapp.dias.response.ForecastResponse
-import com.nanda.weatherapp.dias.response.WeatherResponse
+import com.nanda.weatherapp.nanda.response.ForecastResponse
+import com.nanda.weatherapp.nanda.response.WeatherResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,14 +12,14 @@ interface ApiService {
     fun getWeatherByCity(
         @Query("q") city: String,
         @Query("appid") appId: String? = API_KEY,
-        @Query("units") units: String? = "metric"
+//        @Query("units") units: String? = "metric"
     ): Call<WeatherResponse>
 
     @GET("forecast")
     fun getForecastByCity(
         @Query("q") city: String,
         @Query("appid") appId: String? = API_KEY,
-        @Query("units") units: String? = "metric"
+//        @Query("units") units: String? = "metric"
     ): Call<ForecastResponse>
 
     // call this function when app first time open
@@ -28,7 +28,8 @@ interface ApiService {
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
         @Query("appid") appId: String? = API_KEY,
-        @Query("units") units: String? = "metric"
+//       BIAR LANGSUNG JADI CELCIUS
+//        @Query("units") units: String? = "metric"
     ): Call<WeatherResponse>
 
     @GET("forecast")
@@ -36,6 +37,6 @@ interface ApiService {
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
         @Query("appid") appId: String? = API_KEY,
-        @Query("units") units: String? = "metric"
+//        @Query("units") units: String? = "metric"
     ): Call<ForecastResponse>
 }
