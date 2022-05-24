@@ -1,10 +1,10 @@
-package com.dias.weatherapp
+package com.nanda.weatherapp
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dias.weatherapp.data.network.ApiConfig
-import com.dias.weatherapp.data.response.WeatherResponse
+import com.nanda.weatherapp.dias.network.ApiConfig
+import com.nanda.weatherapp.dias.response.WeatherResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

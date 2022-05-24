@@ -1,6 +1,6 @@
-package com.dias.weatherapp.data.network
+package com.nanda.weatherapp.dias.network
 
-import com.dias.weatherapp.BuildConfig
+import com.nanda.weatherapp.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

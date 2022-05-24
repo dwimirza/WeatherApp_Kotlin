@@ -1,8 +1,8 @@
-package com.dias.weatherapp.data.network
+package com.nanda.weatherapp.dias.network
 
-import com.dias.weatherapp.BuildConfig.API_KEY
-import com.dias.weatherapp.data.response.ForecastResponse
-import com.dias.weatherapp.data.response.WeatherResponse
+import com.nanda.weatherapp.BuildConfig.API_KEY
+import com.nanda.weatherapp.dias.response.ForecastResponse
+import com.nanda.weatherapp.dias.response.WeatherResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

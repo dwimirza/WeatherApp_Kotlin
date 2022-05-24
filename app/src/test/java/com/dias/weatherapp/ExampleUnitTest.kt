@@ -1,4 +1,4 @@
-package com.dias.weatherapp
+package com.nanda.weatherapp
 
 import org.junit.Test
 
